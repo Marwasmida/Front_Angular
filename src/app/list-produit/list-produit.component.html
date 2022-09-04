@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Desc</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Cat</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of tabProduit ;let i = index" >
+        <th scope="row">{{i+1}}</th>
+        <td>{{p.name}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.prix}}</td>
+        <td>{{p.category}}</td>
+        <td><mat-icon style="cursor: pointer;" (click)="viewAff(p)">remove_red_eye</mat-icon><mat-icon style="cursor: pointer;" (click)="deleteproduit(p)">restore_from_trash</mat-icon></td>
+      </tr> 
+    </tbody>
+  </table>

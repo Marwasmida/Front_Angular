@@ -1,0 +1,31 @@
+<form id="form1" name="form1" #form="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Name</label>
+      <input [(ngModel)]="produit.name"class="form-control" placeholder="name"
+      required name="name" #name="ngModel" >
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">prix</label>
+      <input class="form-control" placeholder="prix" [(ngModel)]="produit.prix" required name="prix" #name="ngModel">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Description</label>
+    <input type="text" [(ngModel)]="produit.desc" class="form-control" placeholder="1234 Main St" required name="desc" #name="ngModel">
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputState">category</label>
+      <select id="inputState" class="form-control" [(ngModel)]="produit.cat" required name="cat" #name="ngModel">
+        <option selected>cat1</option>
+        <option>cat2</option>
+        <option>cat3</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="updateProdui()">Modifier Produit</button>
+  <button type="submit" class="btn btn-primary" (click)="goToListProduit()">List Produit</button>
+
+</form>
